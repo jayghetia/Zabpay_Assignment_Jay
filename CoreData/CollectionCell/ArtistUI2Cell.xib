@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ArtistUI2Cell" reuseIdentifier="ArtistUI2Cell" id="dPR-8k-1zv" customClass="ArtistUI2Cell">
+            <rect key="frame" x="0.0" y="0.0" width="221" height="202"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="221" height="202"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlaceHolder_Artist" translatesAutoresizingMaskIntoConstraints="NO" id="VtF-Dd-oay">
+                        <rect key="frame" x="0.0" y="0.0" width="221" height="152"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb5-G8-Jpv" userLabel="Artist Name">
+                        <rect key="frame" x="8" y="152" width="213" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="zAN-AD-cxy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJF-eu-Xn9" userLabel="Genres Name">
+                        <rect key="frame" x="8" y="177" width="213" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="PIk-ni-gbA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="WJF-eu-Xn9" firstAttribute="top" secondItem="pb5-G8-Jpv" secondAttribute="bottom" id="20n-7E-1kH"/>
+                <constraint firstItem="VtF-Dd-oay" firstAttribute="top" secondItem="dPR-8k-1zv" secondAttribute="top" id="3KC-HP-GK2"/>
+                <constraint firstItem="pb5-G8-Jpv" firstAttribute="leading" secondItem="dPR-8k-1zv" secondAttribute="leading" constant="8" id="83L-zd-LOB"/>
+                <constraint firstAttribute="trailing" secondItem="pb5-G8-Jpv" secondAttribute="trailing" id="Bxn-VS-w4v"/>
+                <constraint firstItem="WJF-eu-Xn9" firstAttribute="leading" secondItem="dPR-8k-1zv" secondAttribute="leading" constant="8" id="QA3-Mw-a8O"/>
+                <constraint firstAttribute="trailing" secondItem="WJF-eu-Xn9" secondAttribute="trailing" id="SMr-wy-Auw"/>
+                <constraint firstAttribute="bottom" secondItem="WJF-eu-Xn9" secondAttribute="bottom" id="Zvy-3Q-06t"/>
+                <constraint firstAttribute="trailing" secondItem="VtF-Dd-oay" secondAttribute="trailing" id="nVN-jF-jdQ"/>
+                <constraint firstItem="VtF-Dd-oay" firstAttribute="leading" secondItem="dPR-8k-1zv" secondAttribute="leading" id="tGc-nI-ZBm"/>
+                <constraint firstItem="pb5-G8-Jpv" firstAttribute="top" secondItem="VtF-Dd-oay" secondAttribute="bottom" id="xW0-GG-ITM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="OOv-7B-7LR"/>
+            <size key="customSize" width="221" height="202"/>
+            <connections>
+                <outlet property="ivImage" destination="VtF-Dd-oay" id="IGc-zE-giI"/>
+                <outlet property="lblArtistName" destination="pb5-G8-Jpv" id="HLE-MO-xsC"/>
+                <outlet property="lblGenresName" destination="WJF-eu-Xn9" id="lNH-4I-c3Y"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="PlaceHolder_Artist" width="200" height="200"/>
+    </resources>
+</document>
